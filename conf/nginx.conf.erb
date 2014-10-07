@@ -18,8 +18,8 @@ http {
   
   server {
     listen <%= ENV["PORT"] %>;
-
-    index index.html;
+    autoindex on;
+    index index.html index.htm default.html default.htm;
     root /app;
   }
 }
